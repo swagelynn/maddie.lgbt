@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'Fira Code Regular';
+	src: url('/FiraCode-Regular.ttf');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Fira Code Regular';
+	background-color: #1e1e2e;
+}
