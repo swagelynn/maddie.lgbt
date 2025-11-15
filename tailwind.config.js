@@ -30,6 +30,7 @@ module.exports = {
 		'border-ctp-sky',
 		'border-ctp-sapphire',
 		'border-ctp-blue',
+		"gap-10"
 	],
 	theme: {
 		extend: {
