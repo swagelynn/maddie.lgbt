@@ -134,7 +134,7 @@ function App() {
 				<h1>she/her</h1>
 				<h1>programmer</h1>
 			</PageSection>
-			<PageSection className={'col-span-2 row-span-2'} title="blog" innerClassName='items-center justify-center'>
+			<PageSection className={'col-span-2 row-span-2'} title="music" innerClassName='items-center justify-center'>
 				<h1 className='text-2xl font-semibold'>[work in progress]</h1>
 			</PageSection>
 			<PageSection
@@ -144,7 +144,8 @@ function App() {
 			>
 				{Object.entries({
 					github: 'https://github.com/swagelynn',
-					discord: '',
+					discord: 'https://discord.com/users/1298435571395330108',
+					soundcloud: "https://soundcloud.com/swagelynn"
 				}).map(([title, url]) => (
 					<h1
 						className="cursor-pointer"
