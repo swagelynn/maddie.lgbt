@@ -175,7 +175,7 @@ function App() {
 			<PageSection
 				className={'col-span-1 row-span-1'}
 				title="links"
-				innerClassName="justify-center items-center gap-5 font-light text-xl"
+				innerClassName="justify-center items-center gap-4 font-light text-xl"
 			>
 				{Object.entries(links).map(([title, url], i) => (
 					<>
@@ -186,7 +186,7 @@ function App() {
 							{title}
 						</h1>
 						{i !== Object.keys(links).length - 1 && (
-							<div className="border-[0.15rem] border-dotted rounded-full border-accent h-[0.15rem] w-1/3">
+							<div className="border-b-[0.15rem] border-dotted border-b-accent h-[0.15rem] w-1/3">
 								<h1></h1>
 							</div>
 						)}
