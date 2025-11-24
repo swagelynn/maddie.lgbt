@@ -37,6 +37,9 @@ module.exports = {
 			colors: {
 				accent: {
 					DEFAULT: "#c182c9"
+				},
+				complement: {
+					DEFAULT: "#C983AE "
 				}
 			}
 		}

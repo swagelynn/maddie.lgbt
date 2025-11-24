@@ -2,13 +2,6 @@ import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Icon } from '@iconify-icon/react/dist/iconify.js';
-import {
-	ButtonBack,
-	ButtonNext,
-	CarouselProvider,
-	Slide,
-	Slider,
-} from 'pure-react-carousel';
 
 function PageSection({
 	children,
@@ -60,11 +53,11 @@ function CoolPeople() {
 			asset: 'https://sadan.zip/assets/B0jNEeZx.webp',
 		},
 		{
-			name: "thing",
-			url: "https://nextsecret.xyz/",
+			name: 'thing',
+			url: 'https://nextsecret.xyz/',
 			// whatever atp
-			asset: "/thing.png"
-		}
+			asset: '/thing.png',
+		},
 	];
 
 	const [index, setIndex] = useState<number>(0);
@@ -121,31 +114,73 @@ function CoolPeople() {
 	);
 }
 
+function Song({
+	title,
+	release,
+	url,
+}: {
+	title: string;
+	release: string;
+	url: string;
+}) {
+	return (
+		<div
+			className="w-full flex-grow flex flex-col border-2 border-dotted border-complement p-2 gap-4 items-center justify-center cursor-pointer"
+			onClick={() => window.open(url, '_blank')}
+		>
+			<h1 className="text-xl text-ellipsis overflow-hidden text-center font-medium">
+				{title}
+			</h1>
+			<h1 className="text-md text-ellipsis overflow-hidden text-center md:flex lg:flex sm:hidden font-light text-complement">
+				{release}
+			</h1>
+		</div>
+	);
+}
+
 function App() {
 	return (
 		<div className="text-accent bg-black grid grid-cols-3 grid-rows-[1fr_1fr_1fr] h-screen w-screen select-none gap-2 p-2">
 			<PageSection
 				className={'col-span-1 row-span-3'}
 				title="about me"
-				innerClassName="items-center justify-center text-xl font-thin gap-12"
+				innerClassName="items-center justify-center text-xl font-thin gap-8"
 			>
 				<img src="/pfp.png" className="w-1/2 rounded-md" />
 				<h1>maddie</h1>
 				<h1>she/her</h1>
 				<h1>programmer</h1>
 			</PageSection>
-			<PageSection className={'col-span-2 row-span-2'} title="music" innerClassName='items-center justify-center'>
-				<h1 className='text-2xl font-semibold'>[work in progress]</h1>
+			<PageSection
+				className={'col-span-1 row-span-2'}
+				title="music"
+				innerClassName="items-center justify-center col gap-4"
+			>
+				<Song
+					url='https://soundcloud.com/swagelynn/resolve-4'
+					title="resolve"
+					release="resolve"
+				/>
+				<Song
+					url='https://soundcloud.com/swagelynn/and-youll-drown-in-it-6'
+					title={`and you'll drown in it`}
+					release="mirror gaze"
+				/>
+				<Song
+					url='https://soundcloud.com/swagelynn/actually-it-was-july-3'
+					title={`actually it was july`}
+					release={`same time next year?`}
+				/>
 			</PageSection>
 			<PageSection
 				className={'col-span-1 row-span-1'}
 				title="links"
-				innerClassName="justify-center items-center gap-10 font-light text-xl"
+				innerClassName="justify-center items-center gap-4 font-light text-xl"
 			>
 				{Object.entries({
 					github: 'https://github.com/swagelynn',
 					discord: 'https://discord.com/users/1298435571395330108',
-					soundcloud: "https://soundcloud.com/swagelynn"
+					soundcloud: 'https://soundcloud.com/swagelynn',
 				}).map(([title, url]) => (
 					<h1
 						className="cursor-pointer"
@@ -156,6 +191,13 @@ function App() {
 				))}
 			</PageSection>
 			<CoolPeople />
+			<PageSection
+				className={'col-span-2 row-span-1'}
+				title="super awesome window"
+				innerClassName="items-center justify-center col gap-4"
+			>
+				<h1>[pretend there's something here]</h1>
+			</PageSection>
 		</div>
 	);
 }
