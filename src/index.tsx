@@ -137,6 +137,7 @@ function App() {
 		github: 'https://github.com/swagelynn',
 		discord: 'https://discord.com/users/1298435571395330108',
 		soundcloud: 'https://soundcloud.com/swagelynn',
+		bandcamp: 'https://swagelynn.bandcamp.com',
 	};
 
 	const bioStrings = ['maddie', 'she/her', 'programmer'];
