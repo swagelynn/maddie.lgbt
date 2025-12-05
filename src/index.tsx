@@ -137,7 +137,6 @@ function App() {
 		github: 'https://github.com/swagelynn',
 		discord: 'https://discord.com/users/1298435571395330108',
 		soundcloud: 'https://soundcloud.com/swagelynn',
-		bandcamp: 'https://swagelynn.bandcamp.com',
 	};
 
 	const bioStrings = ['maddie', 'she/her', 'programmer'];
@@ -150,9 +149,9 @@ function App() {
 				innerClassName="items-center justify-center col gap-4"
 			>
 				<Song
-					url="https://soundcloud.com/swagelynn/resolve-4"
-					title="resolve"
-					release="resolve"
+					url="https://soundcloud.com/swagelynn/song-for-us-5"
+					title="song for us"
+					release="through"
 				/>
 				<Song
 					url="https://soundcloud.com/swagelynn/and-youll-drown-in-it-6"
