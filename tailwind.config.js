@@ -5,6 +5,7 @@ module.exports = {
 			prefix: 'ctp',
 			defaultFlavour: 'mocha',
 		}),
+		require("@tailwindcss/typography")
 	],
 	safelist: [
 		"bg-ctp-text",
