@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Blog } from '.';
 import Markdown from 'react-markdown';
 import { Icon } from '@iconify-icon/react/dist/iconify.js';
@@ -10,6 +10,14 @@ export default function BlogLayer({
 	blog: Blog;
 	setBlog: any;
 }) {
+	useEffect(() => {
+		document.addEventListener('keydown', (ev) => {
+			if (ev.key == 'Escape' && blog !== undefined) {
+				setBlog(null);
+			}
+		});
+	}, []);
+
 	return (
 		<div
 			className="w-full h-full absolute z-40 text-accent items-center justify-center flex"
