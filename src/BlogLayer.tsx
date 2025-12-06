@@ -25,7 +25,10 @@ export default function BlogLayer({
 		>
 			{blog && (
 				<>
-					<div className="bg-black w-full h-full absolute opacity-70 -z-10"></div>
+					<div
+						className="bg-black w-full h-full absolute opacity-70 -z-10"
+						onClick={() => setBlog(null)}
+					/>
 					<div className={`flex flex-col h-[95vh] w-[95vw] bg-black`}>
 						<div
 							className={`border-accent border-2 h-10 pl-2 flex items-center font-semibold select-none`}
@@ -45,7 +48,8 @@ export default function BlogLayer({
 						>
 							<div className="prose text-accent prose-headings:text-complement prose-strong:text-complement prose-a:text-alt prose-ul:text-accent prose-li:text-accent prose-li:marker:text-accent w-full whitespace-normal break-normal max-w-none">
 								<Markdown>
-									{blog.contents.join('\n\n') + "\n\n \\- maddie"}
+									{blog.contents.join('\n\n') +
+										'\n\n \\- maddie'}
 								</Markdown>
 							</div>
 						</div>
