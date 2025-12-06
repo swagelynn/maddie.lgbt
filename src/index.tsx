@@ -148,8 +148,35 @@ function App() {
 	};
 
 	const bioStrings = ['maddie', 'she/her', 'programmer'];
-	
+
 	const [blog, setBlog] = useState<Blog>(null);
+
+	// blog link logic
+	useEffect(() => {
+		const url = new URL(window.location.toString());
+		const blogParam = url.searchParams.get('blog');
+
+		if(blogParam) {
+			const decode = decodeURIComponent(blogParam);
+
+			blogs.forEach((b) => {
+				if(b.title === decode) {
+					setBlog(b);
+				}
+			})
+		}
+	}, []);
+	useEffect(() => {
+		const url = new URL(window.location.toString());
+
+		if (blog) {
+			url.searchParams.set('blog', encodeURIComponent(blog.title));
+		} else {
+			url.searchParams.delete('blog');
+		}
+
+		window.history.replaceState({}, '', url);
+	}, [blog]);
 
 	return (
 		<>
@@ -220,7 +247,7 @@ function App() {
 				<PageSection
 					className={'col-start-4 col-end-4 row-start-2 row-end-4'}
 					title="blog"
-					innerClassName="items-center justify-start text-lg font-thin gap-8"
+					innerClassName="items-center justify-start text-lg font-thin gap-3 overflow-scroll"
 				>
 					{blogs.map((b) => {
 						return (

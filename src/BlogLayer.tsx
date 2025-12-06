@@ -43,8 +43,8 @@ export default function BlogLayer({
 						<div
 							className={`border-accent border-2 p-8 h-full border-dotted border-t-0 flex flex-col overflow-scroll`}
 						>
-							<div className=" prose text-accent prose-headings:text-complement prose-strong:text-complement">
-								<Markdown>{blog.contents.join('\n')}</Markdown>
+							<div className=" prose text-accent prose-headings:text-complement prose-strong:text-complement prose-a:text-alt">
+								<Markdown>{blog.contents.join('\n\n')}</Markdown>
 							</div>
 						</div>
 					</div>

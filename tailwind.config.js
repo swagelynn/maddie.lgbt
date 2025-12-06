@@ -40,7 +40,10 @@ module.exports = {
 					DEFAULT: "#c182c9"
 				},
 				complement: {
-					DEFAULT: "#C983AE "
+					DEFAULT: "#C983AE"
+				},
+				alt: {
+					DEFAULT: "#83C99E"
 				}
 			}
 		}
