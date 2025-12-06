@@ -11,3 +11,7 @@ body {
 	font-family: 'Fira Code VF';
 	background-color: #1e1e2e;
 }
+
+img {
+	margin: 0px !important;
+}
