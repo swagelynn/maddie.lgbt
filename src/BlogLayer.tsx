@@ -47,7 +47,21 @@ export default function BlogLayer({
 							className={`border-accent border-2 p-8 h-full w-full border-dotted border-t-0 flex flex-col overflow-scroll`}
 						>
 							<div className="prose text-accent prose-headings:text-complement prose-strong:text-complement prose-a:text-alt prose-ul:text-accent prose-li:text-accent prose-li:marker:text-accent w-full whitespace-normal break-normal max-w-none">
-								<Markdown>
+								<Markdown
+									components={{
+										img: ({ alt, src, title }) => (
+											<img
+												alt={alt}
+												src={src}
+												title={title}
+												style={{
+													maxWidth: '100%',
+													height: 'auto',
+												}}
+											/>
+										),
+									}}
+								>
 									{blog.contents.join('\n\n') +
 										'\n\n \\- maddie'}
 								</Markdown>
