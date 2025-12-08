@@ -16,7 +16,7 @@ export function ToastProvider({ children }) {
 
 	const addToast = (toast) => {
         if(queue.some(t => t.text === toast.text)) return;
-        
+
 		setQueue((q) => [...q, { id: Date.now(), ...toast }]);
 	};
 
@@ -55,7 +55,6 @@ export function ToastProvider({ children }) {
 	);
 }
 
-// Hook to use toast anywhere
 export function useToast() {
 	const context = useContext(ToastContext);
 	if (!context)

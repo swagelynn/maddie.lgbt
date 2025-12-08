@@ -42,7 +42,7 @@ async function sendQuestion(
 				return [false, 'too many questions! wait a few minutes :3'];
 			default:
 				return [
-					true,
+					false,
 					'submission failed with an unknown error, try again later! ^-^',
 				];
 		}
