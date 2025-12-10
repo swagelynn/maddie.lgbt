@@ -141,17 +141,17 @@ function App() {
 						innerClassName="items-center justify-center col gap-4"
 					>
 						<Song
-							url="https://soundcloud.com/swagelynn/song-for-us-5"
+							url="https://soundcloud.com/maddiecoldseason/song-for-us-5"
 							title="song for us"
 							release="through"
 						/>
 						<Song
-							url="https://soundcloud.com/swagelynn/and-youll-drown-in-it-6"
+							url="https://soundcloud.com/maddiecoldseason/and-youll-drown-in-it-6"
 							title={`and you'll drown in it`}
 							release="mirror gaze"
 						/>
 						<Song
-							url="https://soundcloud.com/swagelynn/actually-it-was-july-3"
+							url="https://soundcloud.com/maddiecoldseason/actually-it-was-july-3"
 							title={`actually it was july`}
 							release={`same time next year?`}
 						/>
