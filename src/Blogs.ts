@@ -16,7 +16,8 @@ export const blogs: Blog[] = [
 			"[youtube music](https://music.youtube.com/playlist?list=OLAK5uy_n6LBOqpjU3_HSVwO9R0UwgzXnJQIkhweo)",
 			"[deezer](https://www.deezer.com/us/album/875039792)",
 			"[spotify](https://open.spotify.com/album/7nSqbvE2iTg0aduE4y7xs0)",
-			"*(side note if you use amazon or youtube music, something went deeply wrong in your childhood)*"
+			"*(side note if you use amazon or youtube music, something went deeply wrong in your childhood)*",
+			'![cover](/blog/music/cover.jpg)',
 		],
 	},
 	{
@@ -28,7 +29,7 @@ export const blogs: Blog[] = [
 			"i'm chopping only royalty free loops, which is definitely more challenging, but it has some benefits too",
 			"i'm really proud of the production so far, and i'm moving towards a more midwest emo/future bass vibe (whatever the fuck that means)",
 			'i expect to be done with it by mid december, so please give it a listen if this piques your interest !! album cover below :3',
-			'![cover](/blog/ratcover.png)',
+			'![cover](/blog/music/ratcover.png)',
 		],
 	},
 	{
