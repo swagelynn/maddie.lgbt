@@ -2,6 +2,18 @@ import { Blog } from '.';
 
 export const blogs: Blog[] = [
 	{
+		date: '12/12/25',
+		title: 'rat alley IS OUT!!',
+		contents: [
+			"## IT'S OUT!! WOO!!",
+			'*i finally scraped together enough money to buy a distrokid subscription*',
+			"there were a few issues with sample clearing (you don't want to know), but rat alley is *finally* out there on every major platform!!",
+			"i'd also like to announce that the leading single for my *next* album will be out on all major platforms in the next day or so",
+			"you can find it under ***coldseason*** everywhere, so please please give it a listen if you're interested :3",
+			"*don't forget, by streaming my song you're gifting me a grand 0.00003 cents of royalties*"
+		],
+	},
+	{
 		date: '07/12/25',
 		title: 'rat alley soon',
 		contents: [
