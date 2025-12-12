@@ -10,7 +10,13 @@ export const blogs: Blog[] = [
 			"there were a few issues with sample clearing (you don't want to know), but rat alley is *finally* out there on every major platform!!",
 			"i'd also like to announce that the leading single for my *next* album will be out on all major platforms in the next day or so",
 			"you can find it under ***coldseason*** everywhere, so please please give it a listen if you're interested :3",
-			"*don't forget, by streaming my song you're gifting me a grand 0.00003 cents of royalties*"
+			"*don't forget, by streaming my song you're gifting me a grand 0.00003 cents of royalties*",
+			"## the links i could find",
+			"[amazon music](https://music.amazon.co.uk/albums/B0G6CZCRZ1)",
+			"[youtube music](https://music.youtube.com/playlist?list=OLAK5uy_n6LBOqpjU3_HSVwO9R0UwgzXnJQIkhweo)",
+			"[deezer](https://www.deezer.com/us/album/875039792)",
+			"[spotify](https://open.spotify.com/album/7nSqbvE2iTg0aduE4y7xs0)",
+			"*(side note if you use amazon or youtube music, something went deeply wrong in your childhood)*"
 		],
 	},
 	{
