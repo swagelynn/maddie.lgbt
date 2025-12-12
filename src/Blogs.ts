@@ -17,7 +17,7 @@ export const blogs: Blog[] = [
 			"[deezer](https://www.deezer.com/us/album/875039792)",
 			"[spotify](https://open.spotify.com/album/7nSqbvE2iTg0aduE4y7xs0)",
 			"*(side note if you use amazon or youtube music, something went deeply wrong in your childhood)*",
-			'![cover](/blog/music/cover.jpg)',
+			'![cover](/blog/music/retcon.png)',
 		],
 	},
 	{
