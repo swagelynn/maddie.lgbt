@@ -78,7 +78,7 @@ function App() {
 		},
 		{
 			letterboxd: 'https://letterboxd.com/swagelynn/',
-			rateyourmusic: 'https://rateyourmusic.com/',
+			rateyourmusic: 'https://rateyourmusic.com/~swagelynn',
 		},
 	];
 
