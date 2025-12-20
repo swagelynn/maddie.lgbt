@@ -70,11 +70,17 @@ export interface Blog {
 }
 
 function App() {
-	const links = {
-		github: 'https://github.com/swagelynn',
-		discord: 'https://discord.com/users/1298435571395330108',
-		soundcloud: 'https://soundcloud.com/swagelynn',
-	};
+	const linkLists = [
+		{
+			github: 'https://github.com/swagelynn',
+			discord: 'https://discord.com/users/1298435571395330108',
+			spotify: 'https://open.spotify.com/artist/4NWVxhAQhzcNXxiAU79FnL',
+		},
+		{
+			letterboxd: 'https://letterboxd.com/swagelynn/',
+			rateyourmusic: 'https://rateyourmusic.com/',
+		},
+	];
 
 	const bioStrings = ['maddie', 'she/her', 'programmer'];
 
@@ -107,72 +113,63 @@ function App() {
 		window.history.replaceState({}, '', url);
 	}, [blog]);
 
-	const [question, setQuestion] = useState<Question>(null);
-
-	const [isRegisteringQuestion, setIsRegisteringQuestion] =
-		useState<boolean>(false);
-
-	const [writtenQuestion, setWrittenQuestion] = useState<Partial<Question>>(
-		{}
-	);
-
 	return (
 		<ToastProvider>
 			<>
-				{!question && <BlogLayer blog={blog} setBlog={setBlog} />}
-				{!blog && (
-					<QuestionLayer
-						question={question}
-						setQuestion={setQuestion}
-					/>
-				)}
-				<RegisterQuestionLayer
-					isRegisteringQuestion={isRegisteringQuestion}
-					setIsRegisteringQuestion={setIsRegisteringQuestion}
-					writtenQuestion={writtenQuestion}
-					setWrittenQuestion={setWrittenQuestion}
-				/>
+				<BlogLayer blog={blog} setBlog={setBlog} />
 				<div className="text-accent bg-black grid grid-cols-4 grid-rows-4 h-screen w-screen select-none gap-2 p-2">
 					<PageSection
 						className={
-							'row-start-1 row-end-3 col-start-1 col-end-2'
+							'row-start-1 row-end-5 col-start-4 col-end-4'
 						}
 						title="music"
 						innerClassName="items-center justify-center col gap-4"
 					>
 						<Song
-							url="https://soundcloud.com/maddiecoldseason/song-for-us-5"
-							title="song for us"
-							release="through"
+							url="https://open.spotify.com/track/4ozidbSLCqkdCXJN9fvpfP"
+							title="retcon"
+							release="allochronic"
 						/>
 						<Song
-							url="https://soundcloud.com/maddiecoldseason/and-youll-drown-in-it-6"
-							title={`and you'll drown in it`}
-							release="mirror gaze"
+							url="https://open.spotify.com/track/3YVpB5FYUj7N9SzTadZm5d"
+							title={`// skip`}
+							release="allochronic"
 						/>
 						<Song
-							url="https://soundcloud.com/maddiecoldseason/actually-it-was-july-3"
-							title={`actually it was july`}
-							release={`same time next year?`}
+							url="https://open.spotify.com/track/6Z8VaxaTsgtT6X1pLAw7Ns"
+							title={`the dogs know what you did`}
+							release={`rat alley`}
 						/>
+						
 					</PageSection>
 					<PageSection
 						className={
-							'row-start-3 row-end-5 col-start-1 col-end-1'
+							'row-start-1 row-end-5 col-start-1 col-end-1'
 						}
 						title="links"
-						innerClassName="justify-center items-center gap-4 font-light text-xl"
+						innerClassName="justify-center items-center gap-8 font-light text-xl"
 					>
-						{Object.entries(links).map(([title, url], i) => (
+						{linkLists.map((list, i) => (
 							<>
-								<h1
-									className="cursor-pointer"
-									onClick={() => window.open(url, '_blank')}
-								>
-									{title}
-								</h1>
-								{i !== Object.keys(links).length - 1 && (
-									<div className="border-b-[0.15rem] border-dotted border-b-accent h-[0.15rem] w-1/3">
+								{Object.entries(list).map(([title, url], i) => (
+									<>
+										<h1
+											className="cursor-pointer"
+											onClick={() =>
+												window.open(url, '_blank')
+											}
+										>
+											{title}
+										</h1>
+										{i !== Object.keys(list).length - 1 && (
+											<div className="border-b-[0.15rem] border-dotted border-b-accent h-[0.15rem] w-1/3">
+												<h1></h1>
+											</div>
+										)}
+									</>
+								))}
+								{i !== linkLists.length - 1 && (
+									<div className="border-b-[0.15rem] border-dotted border-b-complement h-[0.15rem] w-2/3">
 										<h1></h1>
 									</div>
 								)}
@@ -198,32 +195,6 @@ function App() {
 							))}
 						</div>
 					</PageSection>
-
-					<PageSection
-						className={
-							'col-start-4 col-end-4 row-start-3 row-end-5'
-						}
-						title="blog"
-						innerClassName="items-center justify-start text-lg font-thin gap-3 overflow-scroll"
-					>
-						{blogs.map((b) => {
-							return (
-								<div
-									className="w-full h-fit flex flex-col border-2 border-dotted border-complement p-2 gap-4 items-center justify-center cursor-pointer"
-									onClick={() => setBlog(b)}
-								>
-									<h1 className="text-lg text-ellipsis overflow-hidden text-center font-medium">
-										{b.title} - {b.date}
-									</h1>
-								</div>
-							);
-						})}
-					</PageSection>
-					<Questions
-						setQuestion={setQuestion}
-						isRegisteringQuestion={isRegisteringQuestion}
-						setIsRegisteringQuestion={setIsRegisteringQuestion}
-					/>
 				</div>
 			</>
 		</ToastProvider>
