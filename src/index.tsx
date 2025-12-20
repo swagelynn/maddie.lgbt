@@ -79,6 +79,7 @@ function App() {
 		{
 			letterboxd: 'https://letterboxd.com/swagelynn/',
 			rateyourmusic: 'https://rateyourmusic.com/~swagelynn',
+			"pronouns.page": "https://en.pronouns.page/@swageline"
 		},
 	];
 
