@@ -37,10 +37,10 @@ module.exports = {
 		extend: {
 			colors: {
 				accent: {
-					DEFAULT: "#c182c9"
+					DEFAULT: "#a86ad8"
 				},
 				complement: {
-					DEFAULT: "#C983AE"
+					DEFAULT: "#e26683"
 				},
 				alt: {
 					DEFAULT: "#83C99E"
