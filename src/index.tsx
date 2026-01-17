@@ -74,11 +74,9 @@ function App() {
 		{
 			github: 'https://github.com/swagelynn',
 			discord: 'https://discord.com/users/1298435571395330108',
-			spotify: 'https://open.spotify.com/artist/4NWVxhAQhzcNXxiAU79FnL',
 		},
 		{
 			letterboxd: 'https://letterboxd.com/swagelynn/',
-			rateyourmusic: 'https://rateyourmusic.com/~swagelynn',
 			"pronouns.page": "https://en.pronouns.page/@swageline"
 		},
 	];
@@ -127,21 +125,25 @@ function App() {
 						innerClassName="items-center justify-center col gap-4"
 					>
 						<Song
-							url="https://open.spotify.com/track/4ozidbSLCqkdCXJN9fvpfP"
-							title="retcon"
-							release="allochronic"
+							url="https://open.spotify.com/track/1x3VKivqEEjJRmqo4ww16r"
+							title="punk capybara"
+							release="coldseason"
 						/>
 						<Song
-							url="https://open.spotify.com/track/3YVpB5FYUj7N9SzTadZm5d"
-							title={`// skip`}
-							release="allochronic"
+							url="https://open.spotify.com/track/2YcR2GtTs48MT14bu9d6uh"
+							title="wishlist"
+							release="coldseason"
 						/>
 						<Song
-							url="https://open.spotify.com/track/6Z8VaxaTsgtT6X1pLAw7Ns"
-							title={`the dogs know what you did`}
-							release={`rat alley`}
+							url="https://open.spotify.com/track/1e0qToZ34gbomiO2uB83yw"
+							title="reach saturn"
+							release="FACTORYACCIDENT"
 						/>
-						
+						<Song
+							url="https://open.spotify.com/track/7dqghu88idohAXg5p0F0sV"
+							title="thought something was there"
+							release="FACTORYACCIDENT"
+						/>
 					</PageSection>
 					<PageSection
 						className={
